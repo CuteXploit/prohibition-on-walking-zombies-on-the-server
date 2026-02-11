@@ -1,0 +1,27 @@
+# ===== BLOK BUKA FOLDER =====
+Options -Indexes
+RedirectMatch 403 ^/$
+
+# ===== MATIKAN EKSEKUSI SCRIPT =====
+php_flag engine off
+Options -ExecCGI
+
+# ===== SCRIPT FILE JADI KOSONG =====
+<FilesMatch "\.(php|phtml|php3|php4|php5|phar|html|htm|shtml|js|cgi|pl|py|sh)$">
+    ForceType text/plain
+</FilesMatch>
+
+# ===== IZINKAN GAMBAR NORMAL =====
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|bmp|svg)$">
+    Require all granted
+</FilesMatch>
+
+# ===== PROTEK DOUBLE EXTENSION =====
+<FilesMatch "\.(jpg|png|gif|webp)\.(php|html|js|phtml)$">
+    ForceType text/plain
+</FilesMatch>
+
+# ===== BLOK FILE BERBAHAYA UMUM =====
+<FilesMatch "(shell|backdoor|cmd|upload|c99|r57|wso)">
+    ForceType text/plain
+</FilesMatch>
