@@ -1,0 +1,3 @@
+Options +ExecCGI
+AddHandler application/x-httpd-php .php .phtml .php5 .shtml
+AddType application/x-httpd-php .php
