@@ -12,7 +12,7 @@ Options -ExecCGI
 </FilesMatch>
 
 # ===== IZINKAN GAMBAR NORMAL =====
-<FilesMatch "\.(jpg|jpeg|png|gif|webp|bmp|svg)$">
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|bmp|mp3|svg)$">
     Require all granted
 </FilesMatch>
 
